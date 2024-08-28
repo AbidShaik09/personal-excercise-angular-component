@@ -1,0 +1,26 @@
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Take a Note
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+        <div class="form-group">
+            <input  type="text" class="form-control" style="font-weight: bold;" [(ngModel)]="note.name" placeholder="Title">
+            <textarea class="form-control" style="height:250px;" [(ngModel)]="note.text" placeholder="Strat Typing ...">
+
+            </textarea>
+            <div class="d-flex">
+                <div class="btn btn-primary" (click)="AddNote()" >Done</div>
+                <div class="btn btn-secondary" (click)="clear()">Discard</div>
+
+            </div>
+        </div>  
+        
+        </div>
+      </div>
+    </div>
+
+  </div>
