@@ -11,7 +11,7 @@ export class ShowNotesComponent {
   notes:Array<Note> = []
   
   constructor(n:NotesService){
-    this.notes = n.notes
+    this.notes = n.getNotes()
 
   }
 }

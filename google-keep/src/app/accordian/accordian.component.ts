@@ -9,13 +9,13 @@ import { NotesService } from '../services/notes.service';
 export class AccordianComponent {
   note:Note=new Note();
   notes:Array<Note>=[]
-  constructor(n:NotesService){
-    this.notes = n.notes 
+  constructor(private n:NotesService){
+    this.notes = n.getNotes()
 
   }
 
   AddNote(){
-    this.notes.push(this.note)
+    this.n.addNote(this.note);
     this.note = new Note()
   }
   clear(){

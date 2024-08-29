@@ -1,16 +1,13 @@
 <div class="accordion container" id="accordionExample">
     
 
-    <div class="accordion-item" *ngFor="let n of notes">
-      <h2 class="accordion-header">
-        <button class="accordion-button " type="button" >
-            {{n.name}}
-        </button>
-      </h2>
-      <div class="accordion-collapse " data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          {{n.text}}
-        </div>
+   
+
+    <div class="card " *ngFor="let n of notes">
+      
+      <div class="card-body">
+        <h5 class="card-title">{{n.name}}</h5>
+        <p class="card-text"> {{n.text}}</p>
       </div>
     </div>
 </div>
